@@ -1,8 +1,9 @@
 const afternoon = 12;
 const morning = 1;
 const night = 18;
+let am = false;
 
-// const chour = 7;
+// const chour = 18;
 
 let switches = true;
 body();
@@ -16,14 +17,21 @@ function body() {
   if (chour >= night) {
     document.querySelector(".greeting").textContent = "Good Night!";
     document.querySelector(".time").textContent = "pm";
+    am = false;
   } else if (chour >= afternoon && !(chour >= night)) {
     document.querySelector(".greeting").textContent = "Good Afternoon!";
     document.querySelector(".time").textContent = "pm";
+    am = false;
   } else if (chour <= afternoon) {
     document.querySelector(".greeting").textContent = "Good Morning!";
     document.querySelector(".time").textContent = "am";
+    am = true;
   }
   document.querySelector(".minute").textContent = cmin;
-  document.querySelector(".hour").textContent = chour;
+  if (am) {
+    document.querySelector(".hour").textContent = chour;
+  } else {
+    document.querySelector(".hour").textContent = chour - 12;
+  }
   setTimeout(body, 1000);
 }
