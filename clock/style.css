@@ -1,0 +1,16 @@
+.welcome {
+  font-family: "Outfit", sans-serif;
+  padding-top: 20px;
+  font-size: 70;
+}
+.greeting {
+  font-size: 84;
+}
+a {
+  font-family: "Outfit", sans-serif;
+  font-size: 70;
+}
+
+body {
+  text-align: center;
+}
