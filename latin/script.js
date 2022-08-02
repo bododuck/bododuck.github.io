@@ -12,11 +12,11 @@ let search = function (keyword) {
     if (
       removeSpecialCharacter(
         vocab[i]["word"] + vocab[i]["stem"] + vocab[i]["meaning"]
+        // vocab[1][1]
       )
         .toLowerCase()
         .search(removeSpecialCharacter(keyword).toLowerCase()) !== -1
     ) {
-      console.log("did search");
       result.push(vocab[i]);
     }
   }
@@ -29,6 +29,21 @@ const USE_CACHE = false;
 // let vocab;
 
 function readDataFromStorage() {
+  let sheet = [];
+  Papa.parse(
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQqeXe-XPEmeaSXl0VhtxB1yTdxODmBpplvOEqx4bYrjxV66X9eBtiqoMXsUwOZHlswFGPTdy5nctHJ/pub?output=csv",
+    {
+      download: true,
+      delimiter: ",",
+      header: true,
+      complete: (results) => {
+        console.log(results);
+        vocab = results.data;
+        init();
+      },
+    }
+  );
+
   // if (USE_CACHE) {
   //   vocab = JSON.parse(sessionStorage.getItem(storageKey));
   // }
@@ -44,7 +59,7 @@ function readDataFromStorage() {
   //     simpleSheet: true,
   //   });
   // } else {
-  init();
+  // init();
   // }
 }
 
@@ -54,17 +69,7 @@ let removeSpecialCharacter = function (s) {
   s = s.replace(/ī/g, "i");
   s = s.replace(/ō/g, "o");
   s = s.replace(/ū/g, "u");
-  console.log(s);
   return s;
-};
-
-const hi = function (s) {
-  s = s.replace(/ā/g, "a");
-  s = s.replace(/ē/g, "e");
-  s = s.replace(/ī/g, "i");
-  s = s.replace(/ō/g, "o");
-  s = s.replace(/ū/g, "u");
-  console.log(s);
 };
 
 function init() {
@@ -79,7 +84,6 @@ function init() {
 }
 
 function searchButtonClick() {
-  console.log("did click");
   let keyword = document.querySelector("#searchBar").value;
   let result = search(keyword);
 
