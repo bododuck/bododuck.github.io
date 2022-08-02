@@ -1,6 +1,6 @@
 import { render, html, svg } from "https://unpkg.com/uhtml?module";
 // https://docs.google.com/spreadsheets/d/1FsgVftIsyZIHd-YzadPVeCW_fFvIipssEnPT3fFSUT8/edit?usp=sharing
-let old_vocab = [
+let vocab = [
   ["cōpia, cōpiae", "cōpi-", "sing, suppy/abundance, pl- troops/ forces", 1],
   ["Gallia, Galliae", "Galli-", "Gaul (the country)", 1],
   ["glōria, glōriae", "glōri-", "fame/glory", 1],
@@ -16,6 +16,7 @@ let search = function (keyword) {
         .toLowerCase()
         .search(removeSpecialCharacter(keyword).toLowerCase()) !== -1
     ) {
+      console.log("did search");
       result.push(vocab[i]);
     }
   }
@@ -25,26 +26,26 @@ let search = function (keyword) {
 const dataSource =
   "https://docs.google.com/spreadsheets/d/1FsgVftIsyZIHd-YzadPVeCW_fFvIipssEnPT3fFSUT8/edit?usp=sharing";
 const USE_CACHE = false;
-let vocab;
+// let vocab;
 
 function readDataFromStorage() {
-  if (USE_CACHE) {
-    vocab = JSON.parse(sessionStorage.getItem(storageKey));
-  }
-  if (!vocab) {
-    // must load from google sheet, processLoadedData will be called in the callback function
-    Tabletop.init({
-      key: dataSource,
-      callback: function (tabletopData) {
-        vocab = tabletopData;
-        //sessionStorage.setItem(storageKey, JSON.stringify(data));
-        init();
-      },
-      simpleSheet: true,
-    });
-  } else {
-    init();
-  }
+  // if (USE_CACHE) {
+  //   vocab = JSON.parse(sessionStorage.getItem(storageKey));
+  // }
+  // if (!vocab) {
+  //   // must load from google sheet, processLoadedData will be called in the callback function
+  //   Tabletop.init({
+  //     key: dataSource,
+  //     callback: function (tabletopData) {
+  //       vocab = tabletopData;
+  //       //sessionStorage.setItem(storageKey, JSON.stringify(data));
+  //       init();
+  //     },
+  //     simpleSheet: true,
+  //   });
+  // } else {
+  init();
+  // }
 }
 
 let removeSpecialCharacter = function (s) {
@@ -53,7 +54,17 @@ let removeSpecialCharacter = function (s) {
   s = s.replace(/ī/g, "i");
   s = s.replace(/ō/g, "o");
   s = s.replace(/ū/g, "u");
+  console.log(s);
   return s;
+};
+
+const hi = function (s) {
+  s = s.replace(/ā/g, "a");
+  s = s.replace(/ē/g, "e");
+  s = s.replace(/ī/g, "i");
+  s = s.replace(/ō/g, "o");
+  s = s.replace(/ū/g, "u");
+  console.log(s);
 };
 
 function init() {
@@ -68,6 +79,7 @@ function init() {
 }
 
 function searchButtonClick() {
+  console.log("did click");
   let keyword = document.querySelector("#searchBar").value;
   let result = search(keyword);
 
@@ -101,8 +113,7 @@ function searchButtonClick() {
 }
 
 document.addEventListener("DOMContentLoaded", readDataFromStorage);
-
-// console.log(search('Cōpia'))
-// console.log(search('z'))
+// console.log(search("Cōpia"));
+// console.log(search("z"));
 
 // console.log(removeSpecialCharacter("Hāllō"));
