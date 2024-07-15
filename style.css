@@ -23,6 +23,7 @@ h1 {
   word-wrap: break-word; /* Ensure long words wrap to the next line */
   overflow-wrap: break-word;
   margin: 0.5rem;
+  letter-spacing: -1px;
 }
 
 h2 {
@@ -35,6 +36,7 @@ h2 {
   overflow-wrap: break-word;
   margin: 0.5rem;
   margin-bottom: 3.5rem;
+  letter-spacing: -0.5px;
 }
 
 a {
@@ -63,7 +65,7 @@ nav {
   align-items: center;
   border: 0;
   padding-left: 0px;
-  padding-right: 8px;
+  padding-right: 2rem;
   padding-bottom: 16px;
   padding-top: 16px;
   margin: 0px;
@@ -120,7 +122,7 @@ nav li a {
 }
 
 .red:hover{
-  background-color: #740023;
+  background-color: #1a255f;
 }
 
 .orange {
@@ -128,7 +130,7 @@ nav li a {
 }
 
 .orange:hover {
-  background-color: #a23100;
+  background-color: #05708a;
 }
 
 .green {
@@ -136,7 +138,7 @@ nav li a {
 }
 
 .green:hover {
-  background-color: #32662d;
+  background-color: #721472;
 }
 
 .blue {
@@ -144,7 +146,7 @@ nav li a {
 }
 
 .blue:hover {
-  background-color: #02646f;
+  background-color: #834308;
 }
 .block{
   display: grid;
@@ -155,12 +157,14 @@ nav li a {
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0px 3px rgba(0, 0, 0, 0.5); /* Box shadow */
   font-size: 1rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
+  letter-spacing: -0.2px;
 }
 
 .subtitle{
   font-size: 1rem;
   color: rgb(238, 238, 238);
+  letter-spacing: 0.5px;
 }
 .custom-button {
   position: relative;
@@ -178,6 +182,7 @@ nav li a {
   font-weight: 700;
   font-style: normal;
   transition: all 0.3s;
+  letter-spacing: 0.20rem;
 }
 
 .custom-button::after {
@@ -193,12 +198,12 @@ nav li a {
 }
 
 .custom-button:hover {
-  /* transform: translateY(-0.5rem); */
+  transform: translateY(0.2rem);
   background-color: #DE4604;
   color: white;
 }
 
-@media (max-width: 38rem) {
+@media (max-width: 40rem) {
   header {
     flex-direction: column; /* Stack logo and nav vertically */
     align-items: center; /* Align items to the start */
@@ -248,7 +253,7 @@ nav li a {
   }
 
   .block-container{
-    padding: 1rem;
+    padding: 10%;
     display: grid;
     grid-template-columns: 40% 40% ;
     grid-auto-rows: 20rem;

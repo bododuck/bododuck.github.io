@@ -22,6 +22,7 @@ h1 {
   word-wrap: break-word; /* Ensure long words wrap to the next line */
   overflow-wrap: break-word;
   margin: 0.5rem;
+  letter-spacing: -1px;
 }
 
 h2 {
@@ -63,7 +64,7 @@ nav {
   align-items: center;
   border: 0;
   padding-left: 0px;
-  padding-right: 8px;
+  padding-right: 16px;
   padding-bottom: 16px;
   padding-top: 16px;
   margin: 0px;
@@ -290,6 +291,7 @@ nav li a {
   text-align: left;
   white-space: pre-wrap; /* Preserve whitespace and line breaks, but wrap text */
   word-wrap: break-word;
+  letter-spacing: 0.5px;
 }
 
 .text img {
@@ -300,6 +302,7 @@ nav li a {
 .date {
   font-weight: 400;
   font-size: 0.9rem; 
+  letter-spacing: 0.2rem;
 }
 
 .bottom-bar{
