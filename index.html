@@ -1,11 +1,15 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
     </style>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -13,23 +17,79 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" type="image/x-icon" href="BododuckLogoIcon.png">
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <nav>
+    <header>    
+      <img class = "logo" src="BododuckLogo3.svg">
+      <nav>
+        <ul>
+          <li>
+            &nbsp&nbsp<a href="index.html">Home</a>
+            <!---&nbsp&nbsp<a href="minecraft.html">Minecraft</a> --->
+            <!-- &nbsp&nbsp<a href="snakechase.html">Snake Chase</a> -->
+            &nbsp&nbsp<a href="latin/index.html">Latin</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1>bododuck</h1>
+    <h2>Website of random things</h2>
+    <button class="custom-button" onclick="location.href='blog/mechanical-pencil-review-1.html';">Latest Post</button>
+    <div class="block-container">
+        <div class="block red" onclick="location.href='blog/mechanical-pencil-review-1.html';"> 
+          <a>Mechanical Pencil Review</a>
+          <a class="subtitle">
+            Review of the GraphGear 500, Kuru Toga Standard Version, Kuru Toga KS, Pentel Smash, and the Staedtler 925 25
+          </a>
+        </div>
+
+        <div class="block green" onclick="location.href='blog/mountain.html';"> 
+          <a>Zugspitze</a>
+          <a class="subtitle">
+            Beautiful Picture of the Mountain at the top of Germany
+          </a>
+        </div>
+
+        <div class="block blue" onclick="location.href='blog/abstractimages.html';"> 
+          <a>Abstract Images</a>
+          <a class="subtitle">
+            What happens if you experiment with photography?
+          </a>
+        </div>
+
+        <!-- <div class="block orange" onclick="location.href='https://www.example1.com';"> 
+          <a>Distinctio qui rerum fugiat voluptatem laboriosam vitae sit.</a>
+        </div> 
+        
+        <div class="hidden block">
+          
+        </div>
+        
+        -->
+    </div>
+
+    <div class="bottom-bar">
+      <div>
+        <img class = "logo" src="BododuckLogo3.svg">
+        <a>
+          bododuck
+        </a>
+      </div>
+
       <ul>
         <li>
-          <!--<img src="bododuck_logo3.png" width="50px">--->
           &nbsp&nbsp<a href="index.html">Home</a>
           <!---&nbsp&nbsp<a href="minecraft.html">Minecraft</a> --->
           <!-- &nbsp&nbsp<a href="snakechase.html">Snake Chase</a> -->
           &nbsp&nbsp<a href="latin/index.html">Latin</a>
         </li>
       </ul>
-    </nav>
-    <h1>&nbspWELCOME TO BODODUCK.com</h1>
-    <style></style>
+    </div>
+
+    <div class="transition-overlay"></div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
       integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
