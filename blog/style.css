@@ -118,35 +118,32 @@ nav li a {
 
 .red {
   background-color: #D20034;
-}
-
-.red:hover{
-  background-color: #740023;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .orange {
   background-color: #DE4604;
-}
-
-.orange:hover {
-  background-color: #a23100;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .green {
   background-color: #4D9D46;
-}
-
-.green:hover {
-  background-color: #32662d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .blue {
   background-color: #0499AB;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
-.blue:hover {
-  background-color: #02646f;
-}
 .block{
   display: grid;
   padding: 1rem;
@@ -202,7 +199,7 @@ nav li a {
   }
 
   .logo {
-    width: 3rem;
+    width: 5rem;
     align-items: center;
   }
 
@@ -237,11 +234,15 @@ nav li a {
   nav li a {
     margin: 1rem;
     text-decoration: none;
-    color: black;
+    color: rgb(48, 48, 48);
   } 
 
   a {
     font-size: 1rem;
+  }
+
+  .text a {
+    font-size: 1.5rem;
   }
 
   .block-container{
