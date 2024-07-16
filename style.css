@@ -51,6 +51,7 @@ a {
 html {
   overflow: hidden;
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -58,6 +59,7 @@ body {
   margin: 0px;
   text-align: center;
   height: 100%;
+  width: 100%;
   background: rgb(252,181,5);;
   background: -moz-radial-gradient(circle, rgba(252,181,5,1) 48%, rgba(252,166,5,1) 100%);
   background: -webkit-radial-gradient(circle, rgba(252,181,5,1) 48%, rgba(252,166,5,1) 100%);
@@ -65,7 +67,6 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcb505",endColorstr="#fca605",GradientType=1); 
   overflow: auto;
   overscroll-behavior-y: none;
-  -webkit-overflow-scrolling: touch;
 }
 header {
   display: flex;
