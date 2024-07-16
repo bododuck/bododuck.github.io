@@ -48,15 +48,24 @@ a {
   font-size: 25px;
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
   /* background-color: #FCB505; */
   margin: 0px;
   text-align: center;
+  height: 100%;
   background: rgb(252,181,5);;
   background: -moz-radial-gradient(circle, rgba(252,181,5,1) 48%, rgba(252,166,5,1) 100%);
   background: -webkit-radial-gradient(circle, rgba(252,181,5,1) 48%, rgba(252,166,5,1) 100%);
   background: radial-gradient(circle, rgba(252,181,5,1) 48%, rgba(252,166,5,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcb505",endColorstr="#fca605",GradientType=1); 
+  overflow: auto;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
 }
 header {
   display: flex;
@@ -251,13 +260,14 @@ body::before {
   transform-origin: bottom;
   transition: transform 0.5s ease-out;
   z-index: 9999;
-  pointer-events: none; /* Allow clicks to pass through the overlay */
+  pointer-events: none; 
   animation: 0.7s ease-out 0s 1 slideInFromLeft;
 }
 
 .transition-overlay.active {
   transform: scaleY(1);
-}
+} 
+
 
 .bottom-bar{
   background-color: #0499AB;

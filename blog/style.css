@@ -45,6 +45,11 @@ a {
   text-align: center;
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
   /* background-color: #FCB505; */
   margin: 0px;
@@ -54,6 +59,10 @@ body {
   background: -webkit-radial-gradient(circle, rgba(252,181,5,1) 48%, rgba(252,166,5,1) 100%);
   background: radial-gradient(circle, rgba(252,181,5,1) 48%, rgba(252,166,5,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcb505",endColorstr="#fca605",GradientType=1); 
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
 }
 header {
   display: flex;
