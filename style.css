@@ -61,7 +61,6 @@ body {
   z-index: -8;
   margin: 0px;
   text-align: center;
-  height: 100%;
   width: 100%;
   background: rgb(252,181,5);;
   background: -moz-radial-gradient(circle, rgba(252,181,5,1) 48%, rgba(252,166,5,1) 100%);
