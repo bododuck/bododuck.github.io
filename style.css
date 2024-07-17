@@ -24,6 +24,7 @@ h1 {
   overflow-wrap: break-word;
   margin: 0.5rem;
   letter-spacing: -1px;
+  cursor: default;
 }
 
 h2 {
@@ -149,7 +150,7 @@ nav li a:hover{
 /* Create the dotted pattern overlay */
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -203,10 +204,11 @@ body::before {
   text-align: right;
   justify-content: flex-end;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0px 3px rgba(0, 0, 0, 0.5); /* Box shadow */
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3), -2px 2px 9px rgba(0, 0, 0, 0.3) , -2px -2px 9px rgba(0, 0, 0, 0.3), 2px -2px 9px rgba(0, 0, 0, 0.3);/* Box shadow */
   font-size: 1rem;
   transition: background-color 0.5s;
   letter-spacing: -0.2px;
+  cursor: pointer;
 }
 
 .subtitle{
@@ -282,11 +284,16 @@ body::before {
   padding: 1rem 3rem;
 }
 
+.bottom-bar a {
+  cursor: default;
+}
+
 .bottom-bar li a {
   margin-left: 5rem;
   text-decoration: none;
   color: rgb(0, 0, 0);
   transition: color 0.5s;
+  cursor: pointer;
 } 
 
 .bottom-bar li a:hover {
